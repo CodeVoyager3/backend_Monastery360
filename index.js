@@ -23,4 +23,6 @@ app.use('/auth', AuthRouter);
 app.use('/products', ProductRouter);
 app.use('/api', GroqRouter); // now points to Groq
 
-module.exports = app;
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
